@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #1a1a1a;
+        color: #f1c40f;
+      }
+    </style>
+  </head>
+  <body class="font-sans">
+    <nav class="flex justify-between items-center p-6 bg-black">
+      <h1 class="text-xl font-bold">Domaniger</h1>
+      <div>
+        <a href="#" class="mx-2">Pricing Plan</a>
+        <a href="#" class="mx-2">Features</a>
+        <a href="#" class="mx-2">Support</a>
+        <a href="#" class="mx-2">More</a>
+      </div>
+      <button class="bg-yellow-500 text-black px-4 py-2 rounded">Login</button>
+    </nav>
+
+    <header class="text-center py-10">
+      <h2 class="text-3xl font-bold">Choose Cloud Hosting Package</h2>
+      <p class="text-gray-400">
+        Free SSL certificate and one domain on all plans
+      </p>
+      <div class="mt-4">
+        <label class="mr-2">Choose the plan:</label>
+        <button id="togglePlan" class="bg-gray-800 px-3 py-1 rounded">
+          Monthly
+        </button>
+      </div>
+    </header>
+
+    <section class="flex flex-wrap justify-center gap-6 p-6">
+      <div class="bg-gray-900 p-6 rounded-lg w-80 text-center">
+        <h3 class="text-xl font-bold">Cloud Startup</h3>
+        <p class="text-gray-400">For business & eCommerce websites</p>
+        <p class="text-2xl font-bold mt-2">
+          $<span class="price">30</span>/month
+        </p>
+        <ul class="text-left mt-4 space-y-2">
+          <li>✅ Free Automatic WordPress Installation</li>
+          <li>✅ WordPress Accelerator (Litespeed)</li>
+          <li>✅ WordPress Vulnerabilities Scanner</li>
+        </ul>
+        <button class="bg-yellow-500 text-black px-4 py-2 mt-4 rounded">
+          Get Started
+        </button>
+      </div>
+
+      <div class="bg-gray-900 p-6 rounded-lg w-80 text-center">
+        <h3 class="text-xl font-bold">Cloud Professional</h3>
+        <p class="text-gray-400">For developing professional websites</p>
+        <p class="text-2xl font-bold mt-2">
+          $<span class="price">60</span>/month
+        </p>
+        <ul class="text-left mt-4 space-y-2">
+          <li>✅ Free Automatic WordPress Installation</li>
+          <li>✅ WordPress Accelerator (Litespeed)</li>
+          <li>✅ WordPress Vulnerabilities Scanner</li>
+          <li>✅ 150 Templates from Designer Professional</li>
+        </ul>
+        <button class="bg-yellow-500 text-black px-4 py-2 mt-4 rounded">
+          Get Started
+        </button>
+      </div>
+
+      <div class="bg-gray-900 p-6 rounded-lg w-80 text-center">
+        <h3 class="text-xl font-bold">Cloud Enterprise</h3>
+        <p class="text-gray-400">For optimizing website performance</p>
+        <p class="text-2xl font-bold mt-2">
+          $<span class="price">150</span>/month
+        </p>
+        <ul class="text-left mt-4 space-y-2">
+          <li>✅ Free Automatic WordPress Installation</li>
+          <li>✅ WordPress Accelerator (Litespeed)</li>
+          <li>✅ WordPress Vulnerabilities Scanner</li>
+          <li>✅ 150 Templates from Designer Professional</li>
+          <li>✅ Cloudflare Protected Nameservers</li>
+          <li>✅ Free WHOIS Domain Privacy Protection</li>
+        </ul>
+        <button class="bg-yellow-500 text-black px-4 py-2 mt-4 rounded">
+          Get Started
+        </button>
+      </div>
+    </section>
+
+    <script>
+      document
+        .getElementById("togglePlan")
+        .addEventListener("click", function () {
+          let prices = document.querySelectorAll(".price");
+          if (this.textContent === "Monthly") {
+            prices[0].textContent = "300";
+            prices[1].textContent = "600";
+            prices[2].textContent = "1500";
+            this.textContent = "Yearly";
+          } else {
+            prices[0].textContent = "30";
+            prices[1].textContent = "60";
+            prices[2].textContent = "150";
+            this.textContent = "Monthly";
+          }
+        });
+    </script>
+  </body>
+</html>
