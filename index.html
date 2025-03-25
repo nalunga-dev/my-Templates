@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-blue-100">
+    <section
+      class="bg-gray-100 m-5 font-poppins rounded-lg p-6 border-purple-600"
+    >
+      <div class="max-w-6xl mx-auto text-center">
+        <h1 class="text-3xl font-bold mb-6">Choose Your Plan</h1>
+        <div class="plans grid md:grid-cols-3 gap-6">
+          <div
+            class="basic-plan bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition"
+          >
+            <h2 class="text-xl font-semibold">Basic</h2>
+            <p class="text-gray-600 my-4">For small businesses</p>
+            <p class="text-2xl font-bold">$9.99/mo</p>
+            <button
+              class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
+              onclick="showDetails('Basic')"
+            >
+              Select
+            </button>
+          </div>
+          <div
+            class="standard-plan bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition"
+          >
+            <h2 class="text-xl font-semibold">Standard</h2>
+            <p class="text-gray-600 my-4">For growing teams</p>
+            <p class="text-2xl font-bold">$19.99/mo</p>
+            <button
+              class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
+              onclick="showDetails('Standard')"
+            >
+              Select
+            </button>
+          </div>
+          <div
+            class="premium bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition"
+          >
+            <h2 class="text-xl font-semibold">Premium</h2>
+            <p class="text-gray-600 my-4">For enterprises</p>
+            <p class="text-2xl font-bold">$29.99/mo</p>
+            <button
+              class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
+              onclick="showDetails('Premium')"
+            >
+              Select
+            </button>
+          </div>
+        </div>
+        <p id="plan-details" class="mt-6 text-gray-700 font-medium"></p>
+      </div>
+    </section>
+    <script>
+      function showDetails(plan) {
+        document.getElementById(
+          "plan-details"
+        ).textContent = `You have selected the ${plan} plan.`;
+      }
+    </script>
+  </body>
+</html>
